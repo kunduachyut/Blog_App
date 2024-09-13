@@ -1,0 +1,19 @@
+/* flex item-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-solid border-black */
+
+.button{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border: solid black;
+    height: 40px;
+    width: 125px;
+}
+
+.image{
+    height: 100px ;
+    width: 100px;
+}
+
+.button:hover{
+    background-color: aqua;
+}
