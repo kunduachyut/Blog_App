@@ -3,7 +3,7 @@ import { assets } from "@/Assets/assets";
 import Image from "next/image";
 import { FiUser } from "react-icons/fi";
 import Link from "next/link"; // Import Link from Next.js
-import ComingSoon from "./ComingSoon";
+import {ComingSoon} from "./ComingSoon";
 // Menu items now include links for each item
 const menuItems = {
   Home: [
