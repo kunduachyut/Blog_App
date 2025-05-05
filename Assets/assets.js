@@ -9,6 +9,10 @@ import blog_icon from './blog_icon.png'
 import add_icon from './add_icon.png'
 import email_icon from './email_icon.png'
 import upload_area from './upload_area.png'
+import upi_icon from './upi_icon.png'
+import visa_icon from './visa_icon.png'
+import master_card_icon from './master_card_icon.png'
+import rupay_logo_icon from './rupay_logo_icon.png'
 
 export const assets = {
     facebook_icon,
@@ -21,7 +25,11 @@ export const assets = {
     blog_icon,
     add_icon,
     email_icon,
-    upload_area
+    upload_area,
+    upi_icon,
+    visa_icon,
+    master_card_icon,
+    rupay_logo_icon
     }
 
     export const blog_data = [

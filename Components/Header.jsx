@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <div className='py-5 px-5 md:px-12 lg:px-28'>
       <div className='flex justify-between items-center'>
-        <Image className='image' src={assets.logo} width={150} alt='Logo' />
+        {/* <Image className='image' src={assets.logo} width={150} alt='Logo' /> */}
         {/* <button className='button'>
           Get Started <Image src={assets.arrow} alt='Arrow' />
         </button> */}
