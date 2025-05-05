@@ -45,31 +45,35 @@ const HoverMenu = () => {
                 {menuName}
               </button>
 
-              {activeMenu === menuName && (
-                <div className="absolute left-0 top-full mt-2 w-64 bg-white shadow-md rounded border border-gray-200 z-10">
-                  <ul className="p-2 space-y-1">
-                    {menuItems[menuName].map((item, index) => (
-                      <li key={index}>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
-                        >
-                          {item}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              <div className={`absolute left-0 top-full mt-2 w-64 bg-white shadow-md rounded border border-gray-200 z-10 transition-all duration-300 ease-in-out
+    ${activeMenu === menuName ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}
+>
+  <ul className="p-2 space-y-1 bg-white rounded">
+    {menuItems[menuName].map((item, index) => (
+      <li key={index}>
+        <a
+          href="#"
+          className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
+        >
+          {item}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
             </div>
           ))}
         </div>
 
         {/* Login & Icon */}
         <div className="flex items-center space-x-4">
-          <button className="text-blue-600 font-semibold hover:underline">
+            <a href="./admin">
+            <button className="text-blue-600 font-semibold hover:underline">
             Login
           </button>
+          </a>
+          
           <FiUser size={22} className="text-gray-700" />
         </div>
       </div>

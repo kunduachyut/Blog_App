@@ -12,7 +12,7 @@ const Footer = () => {
           <p>
             Copyright © {new Date().getFullYear()}{' '}
             <span className="text-lime-400 font-semibold">
-              Cocoguru Coconut Industries Pvt. Ltd.
+              Your company name Pvt. Ltd.
             </span>
           </p>
         </div>
