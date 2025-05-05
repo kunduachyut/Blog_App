@@ -39,7 +39,8 @@ const HoverMenu = () => {
       <div className="flex items-center justify-between w-full max-w-[3707px] h-[71px] px-8">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Image src={assets.logo} width={150} height={50} alt="Logo" />
+          <a href="/">
+          <Image src={assets.logo} width={150} height={50} alt="Logo" /></a>
         </div>
 
         {/* Navigation Buttons */}
