@@ -2,22 +2,32 @@ import React, { useState } from "react";
 import { assets } from "@/Assets/assets";
 import Image from "next/image";
 import { FiUser } from "react-icons/fi";
-
+import Link from "next/link"; // Import Link from Next.js
+import ComingSoon from "./ComingSoon";
+// Menu items now include links for each item
 const menuItems = {
-  Home: ["About Us", "Quality Control", "Management Team", "CSR", "Contact Us"],
-  Portfolio: [
-    "Baby Massage Oil",
-    "Digital Marketplace",
-    "OTC Segment",
-    "Corporate Assignment",
-    "Best Manufacturing Projects",
+  Home: [
+    { name: "About Us", link: "/ComingSoon" },
+    { name: "Quality Control", link: "/quality-control" },
+    { name: "Management Team", link: "/management-team" },
+    { name: "CSR", link: "/csr" },
+    { name: "Contact Us", link: "/contact" },
   ],
-  "Update Info": ["PDF File Reference Will be enlisted here"],
+  Portfolio: [
+    { name: "Baby Massage Oil", link: "/portfolio/baby-massage-oil" },
+    { name: "Digital Marketplace", link: "/portfolio/digital-marketplace" },
+    { name: "OTC Segment", link: "/portfolio/otc-segment" },
+    { name: "Corporate Assignment", link: "/portfolio/corporate-assignment" },
+    { name: "Best Manufacturing Projects", link: "/portfolio/best-manufacturing-projects" },
+  ],
+  "Update Info": [
+    { name: "PDF File Reference Will be enlisted here", link: "/update-info/pdf-reference" },
+  ],
   Distribution: [
-    "Channel Marketing",
-    "State C&FA",
-    "Export Policies",
-    "Job & Work",
+    { name: "Channel Marketing", link: "/distribution/channel-marketing" },
+    { name: "State C&FA", link: "/distribution/state-cfa" },
+    { name: "Export Policies", link: "/distribution/export-policies" },
+    { name: "Job & Work", link: "/distribution/job-work" },
   ],
 };
 
@@ -45,35 +55,35 @@ const HoverMenu = () => {
                 {menuName}
               </button>
 
-              <div className={`absolute left-0 top-full mt-2 w-64 bg-white shadow-md rounded border border-gray-200 z-10 transition-all duration-300 ease-in-out
-    ${activeMenu === menuName ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}
->
-  <ul className="p-2 space-y-1 bg-white rounded">
-    {menuItems[menuName].map((item, index) => (
-      <li key={index}>
-        <a
-          href="#"
-          className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
-        >
-          {item}
-        </a>
-      </li>
-    ))}
-  </ul>
-</div>
-
+              <div
+                className={`absolute left-0 top-full mt-2 w-64 bg-white shadow-md rounded border border-gray-200 z-10 transition-all duration-300 ease-in-out
+                  ${activeMenu === menuName ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}
+              >
+                <ul className="p-2 space-y-1 bg-white rounded">
+                  {menuItems[menuName].map((item, index) => (
+                    <li key={index}>
+                      {/* Directly use Link with className */}
+                      <Link
+                        href={item.link}
+                        className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
 
         {/* Login & Icon */}
         <div className="flex items-center space-x-4">
-            <a href="./admin">
+          <a href="./admin">
             <button className="text-blue-600 font-semibold hover:underline">
-            Login
-          </button>
+              Login
+            </button>
           </a>
-          
           <FiUser size={22} className="text-gray-700" />
         </div>
       </div>

@@ -1,0 +1,14 @@
+@keyframes scrollLeftToRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .animate-scroll {
+    display: inline-block;
+    animation: scrollLeftToRight 10s linear infinite;
+  }
+  
