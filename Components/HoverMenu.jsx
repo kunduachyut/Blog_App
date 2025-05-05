@@ -7,11 +7,11 @@ import {ComingSoon} from "./ComingSoon";
 // Menu items now include links for each item
 const menuItems = {
   Home: [
-    { name: "About Us", link: "/ComingSoon" },
-    { name: "Quality Control", link: "/quality-control" },
-    { name: "Management Team", link: "/management-team" },
-    { name: "CSR", link: "/csr" },
-    { name: "Contact Us", link: "/contact" },
+    { name: "About Us", link: "/home/ComingSoon" },
+    { name: "Quality Control", link: "/home/quality-control" },
+    { name: "Management Team", link: "/home/management-team" },
+    { name: "CSR", link: "/home/csr" },
+    { name: "Contact Us", link: "/home/contact" },
   ],
   Portfolio: [
     { name: "Baby Massage Oil", link: "/portfolio/baby-massage-oil" },
