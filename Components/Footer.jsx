@@ -12,7 +12,7 @@ const Footer = () => {
           <p>
             Copyright © {new Date().getFullYear()}{' '}
             <span className="text-lime-400 font-semibold">
-              Your company name Pvt. Ltd.
+              Atlab Co Production Pvt. Ltd.
             </span>
           </p>
         </div>

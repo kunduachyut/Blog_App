@@ -8,8 +8,15 @@ const BlogItems = ({ title, description, category, image, id }) => {
   return (
     <div className='blogImage'>
       <Link href={`/blogs/${id}`}>
-        <Image src={image} alt='' width={400} height={400} className='border-b border-black' />
-      </Link>
+  <Image
+    src={image}
+    alt=''
+    width={1600}
+    height={1303}
+    className='border-b border-black object-cover'
+  />
+</Link>
+
       
       <p className='ml-5 mt-5 px-1 inline-block bg-black text-white text-sm'>{category}</p>
       
